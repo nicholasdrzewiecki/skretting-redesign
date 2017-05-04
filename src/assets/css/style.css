@@ -1,0 +1,269 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Text related elements */
+
+a {
+  text-decoration: none;
+  color: #424242;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+
+/* Visibility */
+
+.invisible {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Buttons */
+
+.button {
+  border: none;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  outline: none;
+  padding: 0.5rem 1rem;
+}
+
+.button-round {
+  border-radius: 2em;
+}
+
+
+/* Colors */
+
+.primary {
+  background-color: #003D6A;
+  color: #FFFFFF;
+}
+
+.secondary {
+  background-color: #C8102E;
+  color: #FFFFFF;
+}
+
+.error {
+  background-color: #C8102E;
+  color: #FFFFFF;
+}
+
+
+/* Floats */
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/* Modal */
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: all 0.2s ease;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.modal .modal-content {
+  background-color: #FFFFFF;
+}
+
+.modal .modal-head {
+  background-color: #003D6A;
+  padding: 1rem;
+}
+
+.modal .modal-head h4 {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.modal .modal-body {
+  color: #616161;
+  padding: 1rem;
+}
+
+.modal .modal-footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal .modal-footer .button:not(:last-child) {
+  margin: 0 0.5rem;
+}
+
+
+/* Phone */
+
+.phone {
+  width: 100vw;
+  height: 100vh;
+  background-color: #F5F5F5;
+  position: relative;
+}
+
+.phone .phone-head {
+  background-color: #003D6A;
+  padding: 1rem;
+}
+
+.phone .phone-head h1 {
+  color: #ffffff;
+  display: inline;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.phone .phone-head i {
+  color: #ffffff;
+}
+
+.phone .notification {
+  padding: 1rem;
+}
+
+.phone .notification i {
+  margin-right: 0.5rem;
+}
+
+.phone .phone-body {
+  background-color: #F4F4F4;
+  line-height: 1.8;
+  padding: 1rem;
+  overflow-y: auto;
+  height: calc(100% - 51px);
+  position: relative;
+}
+
+
+/* Dark screen during sidebar and modal */
+
+.phone .phone-body .screen {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+/* Phone cards for content */
+
+.phone .phone-body .post:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.phone .phone-body .posts .post {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.phone .phone-body .posts .post .post-head {
+  background-color: #C8102E;
+  color: #FFFFFF;
+  padding: 1rem;
+  position: relative;
+}
+
+.phone .phone-body .posts .post .post-head i {
+  margin-right: 0.5rem;
+}
+
+.phone .phone-body .posts .post .post-head h4 {
+  font-weight: 700;
+  display: inline;
+}
+
+.phone .phone-body .posts .post .post-body {
+  background-color: #FFFFFF;
+  color: #424242;
+  padding: 1rem;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+  background-color: #003D6A;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-240px);
+  transition: 0.4s cubic-bezier(0.5, 0, 0, 1);
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 240px;
+  z-index: 2;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem;
+  line-height: 2rem;
+}
+
+.sidebar ul li {
+  color: #FFFFFF;
+  padding: 1rem;
+}
+
+.sidebar ul li a {
+  color: #FFFFFF;
+}
+
+.sidebar ul li i {
+  margin-right: 1em;
+}
+
+
+/* Sidebar open */
+
+.open {
+  transform: translateX(0);
+}
