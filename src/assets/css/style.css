@@ -26,6 +26,32 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
+/* Form related elements */
+
+form {
+  padding-bottom: 0.5rem;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+label {
+  padding-bottom: 0.5rem;
+  display: block;
+}
+
+label:not(:first-child) {
+  padding-top: 0.5rem;
+}
+
+
 /* Visibility */
 
 .invisible {
@@ -52,6 +78,26 @@ h1, h2, h3, h4, h5, h6, p {
 
 .button-round {
   border-radius: 2em;
+}
+
+
+/* Inputs */
+
+.input {
+  display: block;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0;
+  background: #F0F0F0;
+  color: #AAAAAA;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+.input:focus {
+  outline: none;
 }
 
 

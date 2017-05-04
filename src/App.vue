@@ -2,26 +2,8 @@
 <div class="container">
   <div class="phone">
 
-    <div class="modal" v-show="settings">
-      <div class="modal-content">
-        <div class="modal-head">
-          <h4>Default Module</h4>
-        </div>
-        <div class="modal-body">
-          <p>Please select a default module</p>
-        </div>
-        <div class="modal-footer">
-          <button class="button secondary" @click="toggleSettings">Cancel</button>
-          <button class="button secondary" @click="toggleSettings">Apply</button>
-        </div>
-      </div>
-    </div>
-
     <div class="phone-head">
       <i class="ion-navicon-round pointer" @click="toggleSidebar"></i>
-      <div class="float-right">
-        <i class="ion-gear-b pointer" @click="toggleSettings"></i>
-      </div>
     </div>
 
     <div class="phone-body">
@@ -66,7 +48,7 @@
           </li>
         </ul>
       </div>
-      <div class="screen" v-show="settings || sidebar" @click="toggleSidebar"></div>
+      <div class="screen" v-show="sidebar" @click="toggleSidebar"></div>
       <!-- Components render here -->
       <router-view></router-view>
     </div>
@@ -80,20 +62,12 @@ export default {
   data() {
     return {
       active: true,
-      settings: false,
       sidebar: false,
       calculators: false,
       orders: false,
     };
   },
   methods: {
-    toggleSettings() {
-      if (this.settings === false) {
-        this.settings = true;
-      } else {
-        this.settings = false;
-      }
-    },
     toggleSidebar() {
       if (this.sidebar === false) {
         this.sidebar = true;
